@@ -61,22 +61,22 @@ class MLPMixer(nn.Module):
         return x
 
 
-def get_mlpmixer(config):
+def get_mlpmixer(cfg):
     """Initialize a Vision Transformer based on configuration.
 
     Args:
-        config: Configuration dictionary.
+        cfg: Configuration dictionary.
     Returns:
         nn.Module: Vision Transformer model.
     """
     return MLPMixer(
-        img_size=config["model"]["image_size"],
-        patch_size=config["model"]["patch_size"],
-        num_channels=config["model"]["num_channels"],
-        embed_dim=config["model"]["embed_dim"],
-        num_classes=config["model"]["num_classes"],
-        depth=config["model"]["depth"],
-        token_dim=config["model"]["token_dim"],
-        channel_dim=config["model"]["channel_dim"],
-        dropout_p=config["model"]["dropout"],
+        img_size=cfg["model"]["image_size"],
+        patch_size=cfg["model"]["patch_size"],
+        num_channels=cfg["model"]["num_channels"],
+        embed_dim=cfg["model"]["embed_dim"],
+        num_classes=cfg["model"]["num_classes"],
+        depth=cfg["model"]["depth"],
+        token_dim=cfg["model"]["token_dim"],
+        channel_dim=cfg["model"]["channel_dim"],
+        dropout_p=cfg["model"]["dropout"],
     )

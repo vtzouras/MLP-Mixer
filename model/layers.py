@@ -92,7 +92,6 @@ class MixerLayer(nn.Module):
             token_dim (int): Dimension of the token mixing MLP.
             channel_dim (int): Dimension of the channel mixing MLP.
             dropout_p (float): Dropout probability.
-
         Returns:
             torch.Tensor: Output tensor.
         """
