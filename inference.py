@@ -42,7 +42,6 @@ def plot_images(
         plt.show()
 
 
-# 86.72% accuracy
 def inference(
     model,
     loader,
