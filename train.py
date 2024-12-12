@@ -27,10 +27,10 @@ def main():
 
     # Initialize model, loss, optimizer, and scheduler.
     model = get_mlpmixer(cfg)
-    model.to(device)
     flops, params = get_flops(model)
     print(f"FLOPs: {flops}")
     print(f"Params: {params}")
+    model.to(device)
     criterion = CrossEntropyLoss(
         label_smoothing=cfg["training"]["smooth_labels"]
     )
