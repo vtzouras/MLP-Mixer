@@ -12,6 +12,7 @@ def cutmix(images, labels, alpha, prob):
         labels: Tensor of labels in the batch.
         alpha: Hyperparameter for sampling the mix ratio from Beta distribution.
         prob: Probability of applying CutMix to an individual image.
+
     Returns:
         Augmented images and mixed labels.
     """
@@ -56,6 +57,7 @@ def mixup(images, labels, alpha, prob):
         labels: Tensor of labels in the batch (one-hot encoded for correct mixing).
         alpha: Hyperparameter for sampling the mix ratio from Beta distribution.
         prob: Probability of applying MixUp to an individual image.
+
     Returns:
         Augmented images and mixed labels.
     """

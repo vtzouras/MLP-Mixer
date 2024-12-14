@@ -18,6 +18,7 @@ class PatchEmbedding(nn.Module):
             img_size (int): Size of the image (assumes square image).
             patch_size (int): Size of the patch (assumes square patch).
             embed_dim (int): Dimension of the embedding vector.
+
         Returns:
             torch.Tensor: Embedded patches.
         """
@@ -56,6 +57,7 @@ class MLP(nn.Module):
             hidden_features (int): Number of hidden features.
             out_features (int): Number of output features.
             p (float): Dropout probability.
+
         Returns:
             torch.Tensor: Output tensor.
         """
@@ -92,6 +94,7 @@ class MixerLayer(nn.Module):
             token_dim (int): Dimension of the token mixing MLP.
             channel_dim (int): Dimension of the channel mixing MLP.
             dropout_p (float): Dropout probability.
+
         Returns:
             torch.Tensor: Output tensor.
         """

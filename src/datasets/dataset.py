@@ -4,7 +4,7 @@ from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 from torchvision.transforms import RandAugment, RandomErasing
 
-from dataset.augmentations import cutmix, mixup
+from src.datasets.augmentations import cutmix, mixup
 
 
 def get_cifar_dataset(cfg):
@@ -13,10 +13,10 @@ def get_cifar_dataset(cfg):
 
     Args:
         cfg: Configuration dictionary containing batch size, data paths, and augmentation options.
+
     Returns:
         train_loader, val_loader: DataLoader objects for train and validation datasets.
     """
-
     preprocess_transform = [transforms.Resize((32, 32))]
     # RandAugment requires a PIL image.
     if cfg["augmentation"]["randaugment"]:
@@ -62,6 +62,7 @@ def get_cifar_dataset(cfg):
 
         Args:
             img: PIL image to be transformed.
+
         Returns:
             Transformed image as a torch tensor.
         """
@@ -76,6 +77,7 @@ def get_cifar_dataset(cfg):
 
         Args:
             batch: List of tuples containing the image and its label.
+
         Returns:
             images: Transformed images as a torch tensor.
             labels: Labels as a torch tensor.

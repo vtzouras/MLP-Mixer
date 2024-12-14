@@ -1,0 +1,22 @@
+[tool.ruff]
+line-length = 79
+indent-width = 4
+select = ["I"]
+fix = true
+
+[tool.ruff.format]
+indent-style = "space"
+quote-style = "double"
+line-ending = "auto"
+
+[tool.ruff.lint]
+select = ["D"]
+ignore = ["D417", "D100", "D101", "D102", "D103", "D104", "D205"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "double"
+multiline-quotes = "double"

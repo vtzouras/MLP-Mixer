@@ -6,6 +6,7 @@ def setup_wandb(cfg):
 
     Args:
         config: Configuration dictionary.
+
     Returns:
         wandb_logger: WandB logger object.
     """

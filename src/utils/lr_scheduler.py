@@ -1,6 +1,6 @@
 from torch.optim.lr_scheduler import CosineAnnealingLR, StepLR
 
-from utils.warmupcosinelr import WarmupCosineLR
+from src.utils.warmupcosinelr import WarmupCosineLR
 
 
 def get_scheduler(optimizer, cfg):
@@ -9,6 +9,7 @@ def get_scheduler(optimizer, cfg):
     Args:
         optimizer (Optimizer): Wrapped optimizer.
         cfg (dict): Configuration dictionary.
+
     Returns:
         _LRScheduler: Learning rate scheduler.
     """

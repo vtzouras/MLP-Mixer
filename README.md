@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 To train the model on CIFAR-10, run the following command:
 ```bash
-python train.py
+python scripts/train.py
 ```
 
 To change the configuration, modify the `configs/default.yaml` file.
@@ -29,6 +29,3 @@ To change the configuration, modify the `configs/default.yaml` file.
 ## Example Results
 
 The model achieves an accuracy of $86.72 \%$ on the CIFAR-10 dataset.
-
-
-

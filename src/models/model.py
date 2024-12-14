@@ -1,6 +1,6 @@
 from torch import nn
 
-from model.layers import MixerLayer, PatchEmbedding
+from src.models.layers import MixerLayer, PatchEmbedding
 
 
 class MLPMixer(nn.Module):
@@ -28,6 +28,7 @@ class MLPMixer(nn.Module):
             token_dim (int): Dimension of the token mixing MLP.
             channel_dim (int): Dimension of the channel mixing MLP.
             dropout_p (float): Dropout probability.
+
         Returns:
             torch.Tensor: Output tensor.
         """
@@ -66,6 +67,7 @@ def get_mlpmixer(cfg):
 
     Args:
         cfg: Configuration dictionary.
+
     Returns:
         nn.Module: Vision Transformer model.
     """

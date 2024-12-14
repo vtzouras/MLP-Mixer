@@ -15,7 +15,6 @@ def save_checkpoint(
         checkpoint_dir: Directory to save the checkpoint.
         filename: Name of the checkpoint file.
     """
-
     os.makedirs(checkpoint_dir, exist_ok=True)
 
     filepath = os.path.join(checkpoint_dir, filename)
@@ -36,6 +35,7 @@ def load_checkpoint(model, filepath):
     Args:
         model: The model to load the checkpoint into.
         filepath: Path to the checkpoint file.
+
     Returns:
         model: The model with its state loaded from the checkpoint.
     """

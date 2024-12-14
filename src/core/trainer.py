@@ -1,8 +1,9 @@
 import torch
 from tqdm import tqdm
 
-from utils.checkpoints import save_checkpoint
-from utils.logging import log_metrics
+from src.core.setup import setup_device
+from src.utils.checkpoints import save_checkpoint
+from src.utils.logging import log_metrics
 
 
 class Trainer:
@@ -37,16 +38,14 @@ class Trainer:
         self.scheduler = scheduler
         self.logger = logger
         self.cfg = cfg
-        self.device = torch.device(
-            "cuda" if torch.cuda.is_available() else "cpu"
-        )
-        self.model.to(self.device)
+        self.device = setup_device()
 
     def train_one_epoch(self, epoch):
         """Train the model for one epoch.
 
         Args:
             epoch (int): The current epoch number.
+
         Returns:
             tuple: A tuple containing the average loss and accuracy for the epoch.
         """
