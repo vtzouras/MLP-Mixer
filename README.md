@@ -24,7 +24,7 @@ To train the model on CIFAR-10, run the following command:
 python scripts/train.py
 ```
 
-To change the configuration, modify the `configs/default.yaml` file.
+To change the configuration, modify the `config/default.yaml` file.
 
 ## Example Results
 
